@@ -1218,31 +1218,31 @@ Primary use:	Showcase Portfolio
 	
 	#logo img {
 		display: block;
-		height: 70px;
+		height: 40px;
 		width: auto;
 		max-width:none;
 	}
 	
-	#logo img.desktop {
+	#logo img.black-logo {
 		opacity:1;
 	}
 	
-	.light-content #logo img.mobile {
+	.light-content #logo img.black-logo {
 		opacity:0;
 	}
 	
-	#logo img.desktop {
+	#logo img.white-logo {
 		position:absolute;
 		top:0;
 		left:0;
 		opacity:0;
 	}
 	
-	.light-content #logo img.desktop {
+	.light-content #logo img.white-logo {
 		opacity:1;
 	}
 	
-	.menu-open.light-content .slide-in #logo img.desktop {
+	.menu-open.light-content .slide-in #logo img.white-logo {
 		opacity:1;
 	}
 	@media all and (min-width: 1025px){
