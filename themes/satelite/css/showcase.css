@@ -76,6 +76,7 @@
 		-webkit-transition: 1.2s ease-in-out;
 		transition: 1.2s ease-in-out;
 		object-fit: contain;
+		object-position:50% 50%;
 	}
 	
 	.section-image {
@@ -87,6 +88,7 @@
 		background-size: cover;
 		opacity:1;	
 		object-fit: contain;
+		object-position:50% 50%;
 	}
 	
 	.title {
