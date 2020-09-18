@@ -75,7 +75,7 @@
 		box-sizing:border-box;
 		-webkit-transition: 1.2s ease-in-out;
 		transition: 1.2s ease-in-out;
-		object-fit: cover;
+		object-fit: contain;
 	}
 	
 	.section-image {
@@ -86,7 +86,7 @@
 		background-position:center center;
 		background-size: cover;
 		opacity:1;	
-		object-fit: cover;
+		object-fit: contain;
 	}
 	
 	.title {
