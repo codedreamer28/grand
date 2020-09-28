@@ -98,7 +98,7 @@
 		display:block;
 		margin-bottom:0px;
 		display:inline-block;
-		vertical-align: top;
+		/*vertical-align: top;*/
 		width:auto;
 		font-size:3.5vw;
 		line-height:50px;
