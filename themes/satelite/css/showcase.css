@@ -90,7 +90,12 @@
 		object-fit: contain;
 		object-position:50% 50%;
 	}
-	
+	@media screen and (max-width:850px){
+		.section-image{
+			background-image: url(/themes/satelite/images/new-image-one.jpeg);
+		}
+	}
+
 	
 	.title {
 		font-weight: 700;
