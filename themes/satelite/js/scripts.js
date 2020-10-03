@@ -18,7 +18,7 @@ $(document).ready(function() {
 	PlayVideo();
 	ContactMap();
 	
-});
+}); //RUNS ONCE THE DOM IS READY TO EXECUTE
 
 
 
@@ -29,22 +29,30 @@ Function Page Load
 	function PageLoad() {	
 		
 		if ($('#page-content').hasClass("light-content")) {
-			$('.preloader-wrap').addClass('light-content');			
-		}
+			$('.preloader-wrap').addClass('light-content');	//adds class name "light-content" to the class attribute		
+		} //adds attribute of class light-content to the perloader-wrap class
 		
-		$('body').removeClass('hidden');		
+		$('body').removeClass('hidden'); // ANCHOR body does not have class hidden		
 		
-		var width = 100,
-			perfData = window.performance.timing, 
-			EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-			time = ((EstimatedTime/1000)%50) * 10
+			/*--------------------------------------------------
+			Navigation Timing API
+			---------------------------------------------------*/
+		var width = 100, // NOTE width of a progres bar in percentage
+			perfData = window.performance.timing, // NOTE performance timing interface
+			EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart), // ANCHOR returns negative value .This subtracts the time at which navigation began (navigationStart) from the time at which the 'load' event handler returns (loadEventEnd). This gives you the perceived page load time.
+			time = ((EstimatedTime/1000)%50) * 10 // NOTE converts miliseconds of estimated time to seconds
 			
+			/*--------------------------------------------------
+			Navigation Timing API
+			---------------------------------------------------*/
+
 		// Loadbar Animation
 		$(".loadbar").animate({
 			width: width + "%"
-		}, time / 0.8);	
+		}, time / 0.8);	// NOTE adds animation to progress bar
 		
 		
+
 		// Percentage Increment Animation
 		var PercentageID = $("#precent"),
 				start = 0,
@@ -68,15 +76,19 @@ Function Page Load
 					clearInterval(timer);
 				}
 			}, stepTime);
-		}
+		} // NOTE adds progress counter animation from 0 - 100
 		
+
+
 		// Fading Out Loadbar on Finised
 		setTimeout(function(){
 			$('.loadbar').append('<span class="hold-progress-bar"></span>');
 			$('body').append('<audio loop autoplay volume="0" id="audio"><source type="audio/mpeg" /></audio>');
+
 			var audio = document.getElementById("audio");    
 			audio.volume = 0.2;
 			audio.play();
+
 			TweenMax.to($('.hold-progress-bar'), 1, {force3D:true,width:'100%', delay:0.1, ease:Power2.easeOut, onComplete:function(){
 				TweenMax.set($(".trackbar"), {visibility:'hidden', opacity:0});
 				$('body').waitForImages({
@@ -193,7 +205,7 @@ Function First Load
 
 	function FirstLoad() {	
 		
-		
+		// NOTE SmoothScroll plugin
 		if ($("body").hasClass("smooth-scroll")) {
 			var elem = document.querySelector("#content-scroll");
 			var scrollbar = Scrollbar.init(elem,
@@ -206,7 +218,7 @@ Function First Load
 		$("html,body").animate({scrollTop: 0}, 1);
 		
 		if ($("#page-content").hasClass("light-content")) {
-			$("main, nav").css('background-color', '#111');
+			$("main, nav").css('background-color', '#111'); // NOTE just changing colors
 			$('#magic-cursor').addClass('light-content');
 			if( $('#hero').length > 0 ){						
 				if( $('#hero').hasClass("has-image")) {	
