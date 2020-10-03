@@ -244,6 +244,7 @@ Function First Load
 			}
 		}
 		
+		// NOTE adding css background using jquery
 		$('.section-image').each(function() {
 			var image = $(this).data('src');	
 			$(this).css({'background-image': 'url(' + image + ')'});
