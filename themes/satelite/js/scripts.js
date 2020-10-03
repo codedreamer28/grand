@@ -200,18 +200,20 @@ Function Page Load
 /*--------------------------------------------------
 responsive image load
 ---------------------------------------------------*/
-$(function() {
-	if($(window).width() < 568) {
-		$(".section-image").each(function() {
-		$(this).attr("data-src","/themes/satelite/images/new-image-one.jpeg");
-		});
-	} else if ($(window).width() >= 568) {
-		$(".section-image").each(function() {
-		$(this).attr("data-src","themes/satelite/images/jaysecimage.jpg");
-		});
-		}
-	});
 
+	$(window).resize(function(){
+
+		$(function() {
+				if($(window).width() < 568) {
+					$(".section-image").each(function() {
+					$(this).attr("data-src","/themes/satelite/images/new-image-one.jpeg");
+					});
+					});
+				} else if ($(window).width() >= 568) {
+					$(".section-image").each(function() {
+				$(this).attr("data-src","themes/satelite/images/jaysecimage.jpg");
+				});
+				});
 
 
 //end of responsive image load
