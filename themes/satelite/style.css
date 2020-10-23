@@ -1218,7 +1218,7 @@ Primary use:	Showcase Portfolio
 	
 	#logo img {
 		display: block;
-		height: 40px;
+		height: 100px;
 		width: auto;
 		max-width:none;
 	}
